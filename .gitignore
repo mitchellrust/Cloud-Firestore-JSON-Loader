@@ -1,0 +1,8 @@
+# Dependency directories
+node_modules/
+
+# upload files
+files/*
+
+# service key file
+service_key.json

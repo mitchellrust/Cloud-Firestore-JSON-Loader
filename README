@@ -1,0 +1,9 @@
+Files directory should contain files of JSON data you want uploaded to Firestore.
+
+The name format for these files is collection.json, where collection is the name of
+the Firestore collection you want that files objects to be uploaded to.
+
+Files should contain an array of JSON objects that will be uploaded.
+
+Note that a randomly auto-generated id will be created for each document, and that id
+will be added to the object with the field of "id".
