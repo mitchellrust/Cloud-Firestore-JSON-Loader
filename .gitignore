@@ -6,6 +6,3 @@ files/*
 
 # service key file
 service_key.json
-
-# database info file
-database_info.json
