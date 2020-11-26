@@ -1,4 +1,5 @@
 var admin = require("firebase-admin");
+var sleep = require("sleep");
 
 // see firebase project -> Settings -> service accounts to generate this file
 var serviceAccount = require("./service_key.json");
@@ -24,12 +25,16 @@ fs.readdir(directoryPath, function(err, files) {
     return console.log("Unable to scan directory: " + err);
   }
 
+  console.log(files);
+
   files.forEach(function(file) {
     var lastDotIndex = file.lastIndexOf(".");
 
-    var menu = require("./files/" + file);
+    var dataArray = require("./files/" + file);
 
-    menu.forEach(function(obj) {
+    // Split array into smaller chunks
+
+    dataArray.forEach(function(obj) {
       // create new document with random id
       var document = firestore.collection(file.substring(0, lastDotIndex)).doc()
       // Add id attribute to JSON object

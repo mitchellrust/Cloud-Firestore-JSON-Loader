@@ -1,8 +1,10 @@
 # Dependency directories
 node_modules/
 
-# upload files
+# Generated and upload files
 files/*
+support_files/*
+updated_files/*
 
 # service key file
 service_key.json
